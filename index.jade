@@ -1,0 +1,62 @@
+- var imgSrc = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDUwMCA1MDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxkZWZzLz48cmVjdCB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjE4OS42NTYyNSIgeT0iMjUwIiBzdHlsZT0iZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjIzcHQ7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NTAweDUwMDwvdGV4dD48L2c+PC9zdmc+"
+include base
++base()
+  
+  #intro
+    .splash-container
+      .image(data-image="img/intro.png")
+      .splash
+        h1.splash-head Boundary Water Canoes
+        p.splash-subhead Begin your unforgettable journey today.
+
+
+
+  section#about.text-left
+    .container
+      .row: .col-md-12: h2 About
+      .row
+        .col-md-12
+          p.body-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tempor maximus odio, ac malesuada dolor. Nulla tellus lorem, blandit eget pellentesque ac, rhoncus a urna. Curabitur tincidunt quam non felis suscipit, non lobortis dolor gravida. Curabitur fringilla sem ut cursus aliquet. Aliquam efficitur mi eget faucibus blandit. Curabitur aliquet purus eu dignissim ornare. In hac habitasse platea dictumst. Sed posuere pharetra odio, sed pulvinar lacus ultrices vitae. Phasellus pulvinar ante vitae tellus accumsan, a porta purus eleifend. Fusce eu massa sit amet ex ullamcorper pulvinar. Quisque pellentesque iaculis metus eget mattis. Morbi eu semper elit. Proin justo tortor, imperdiet a nisl ac, fringilla consequat arcu. Nulla eu maximus odio.
+
+  section#rentals.text-left
+    .container
+      .row: .col-md-12: h2 Rentals
+      .row
+        +img-hover("#im1", "img/small.png", "For Two", "Lorem ipsum dolor sit amet, elit.")
+        +img-hover("#im2", "img/medium.png", "For Three", "Lorem ipsum dolor sit amet, elit.")
+      .row
+        +img-hover("#im3", "img/large.png", "For Four", "Lorem ipsum dolor sit amet, elit.")
+        +img-hover("#im4", "img/kayak.png", "Kayak", "Lorem ipsum dolor sit amet, elit.")
+
+
+
+  section#tours.text-left
+    .container
+      .row: .col-md-12: h2 Tours
+      .row
+        .col-md-12
+          p.body-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tempor maximus odio, ac malesuada dolor. Nulla tellus lorem, blandit eget pellentesque ac, rhoncus a urna. Curabitur tincidunt quam non felis suscipit, non lobortis dolor gravida. Curabitur fringilla sem ut cursus aliquet. Aliquam efficitur mi eget faucibus blandit. Curabitur aliquet purus eu dignissim ornare. In hac habitasse platea dictumst. Sed posuere pharetra odio, sed pulvinar lacus ultrices vitae. Phasellus pulvinar ante vitae tellus accumsan, a porta purus eleifend. Fusce eu massa sit amet ex ullamcorper pulvinar. Quisque pellentesque iaculis metus eget mattis. Morbi eu semper elit. Proin justo tortor, imperdiet a nisl ac, fringilla consequat arcu. Nulla eu maximus odio.
+
+
+
+  section#contact.text-left
+    .container
+      .row: .col-md-12: h2 Contact
+      .row
+        .col-md-6
+          iframe(frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/d/embed?mid=zhED8Si7R7dA.kNU_gF9ewZjo")
+        .col-md-6
+          input#fname(type="text" placeholder="Name" spellcheck="false")
+          input#femail(type="text" placeholder="Email" spellcheck="false")
+          input#fphone(type="text" placeholder="Phone Number" spellcheck="false")
+          textarea#fmessage(type="text" placeholder="Your Message" spellcheck="false")
+          button#fsend Send
+
+
+
+
+
+  +img-modal("im1", "img/small.png")
+  +img-modal("im2", "img/medium.png")
+  +img-modal("im3", "img/large.png")
+  +img-modal("im4", "img/kayak.png")

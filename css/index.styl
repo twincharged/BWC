@@ -1,0 +1,310 @@
+$color1 = #222
+@import "misc"
+
+
+html,
+body
+  width: 100%
+  overflow-x: hidden
+  font-family: "Open Sans"
+  font-size: 18px
+
+nav.navbar
+  background: $color1
+  vendor("transition", border-color .5s ease)
+  &.active
+    border-color: $color2
+  .navbar-brand
+    padding: 7px
+    &:hover
+      background: inherit
+    img
+      size(75px, 31px)
+  a
+    color: #fff
+    font("Open Sans", .9rem !important, center)
+    &:hover
+      background: #fff
+      color: $color1
+    &:focus
+      background: none
+      color: none
+  li
+    &.active,
+    &:hover
+      background: #fff
+      a
+        color: $color1
+
+#intro
+  position: relative
+  .splash-container
+    z-index: -1
+    overflow: hidden
+    background: rgba(0,0,0,0)
+    size(100%, 75vh)
+    .image
+      size(100%,100%)
+    .splash
+      size(50%, 50%)
+      placement(100px,0,0,0)
+      margin: auto
+      text-align: center
+      text-transform: uppercase
+      .splash-head
+        background: rgba(#222, .12)
+        word-spacing: 10px
+        font-size: 2.4rem
+        color: #fff
+        border: 3px solid #fff
+        padding: 1em 1.6em
+        font-weight: 100
+        border-radius: 5px
+        line-height: 1em
+      .splash-subhead
+        word-spacing: 4px
+        color: #fff
+        opacity: 0.8
+
+
+
+
+
+
+
+section
+  position: relative
+  padding: 50px 0 50px 0
+  overflow: hidden
+  background: #fff
+  color: #222
+  h2::after
+    position: absolute
+    top: 100%
+    left: 0
+    width: 100%
+    height: 4px
+    background: #222
+    content: ""
+  .row
+    padding: 15px 0 15px 0
+    &:first-child
+      margin-bottom: 50px
+
+
+#contact
+  iframe
+    display: block
+    display: relative
+    width: 100%
+    height: 325px
+    margin: 0 auto
+    margin-top: 25px
+  input, textarea, button
+    display: block
+    position: relative
+    margin: 0 auto
+    border: none
+    border-bottom: 2px solid #222
+    border-left: 2px solid #222
+    outline: 0
+    background: #fff
+    color: #222
+    margin-top: 25px
+  input, textarea
+    width: 100%
+  input
+    height: 50px
+  textarea
+    height: 100px
+  button
+    text-align: center
+    size(50%, 50px)
+    &:hover
+      background: #222
+      color: #fff
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.modal-dialog
+  width: 65%
+
+.modal-content
+  border-radius: 0px !important
+
+.modal-header 
+  border: none
+  button
+    outline: 0
+
+.modal-body
+  img 
+    display: block
+    width: 95%
+    margin: 0 auto
+    margin-bottom: 30px
+
+
+
+
+
+
+
+
+
+
+/*---------------*/
+/***** Marley. Credit: Mary Lou & http://tympanus.net/codrops/2014/10/28/some-more-subtle-hover-effect-ideas/ *****/
+/*---------------*/
+
+
+
+.grid 
+  position: relative
+  margin: 0 auto
+  padding: 1em 0 4em
+  max-width: 1000px
+  list-style: none
+  text-align: center
+  figure 
+    position: relative
+    overflow: hidden
+    margin: 0 auto
+    min-width: 320px
+    max-width: 480px
+    max-height: 360px
+    width: 100%
+    background: #3085a3
+    text-align: center
+    cursor: pointer
+    img 
+      position: relative
+      display: block
+      min-height: 100%
+      max-width: 100%
+      opacity: 0.8
+
+    figcaption 
+      padding: 2em
+      color: #fff
+      text-transform: uppercase
+      font-size: 1.25em
+      -webkit-backface-visibility: hidden
+      backface-visibility: hidden
+      &, & > a 
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+      & > a 
+        z-index: 1000
+        text-indent: 200%
+        white-space: nowrap
+        font-size: 0
+        opacity: 0
+      a
+        color: #222
+
+      &::before, &::after 
+        pointer-events: none
+
+    h3
+      word-spacing: 2px
+      font-weight: 500
+
+    h3, p 
+      margin: 0
+
+    p 
+      letter-spacing: 1px
+      font-size: 68.5%
+
+
+
+
+
+
+figure.effect-marley
+  
+  &:hover h3
+    -webkit-transform: translate3d(0,0,0)
+    transform: translate3d(0,0,0)
+    
+  figcaption
+    text-align: left
+    
+  h3, p
+    position: absolute
+    right: 30px
+    left: 30px
+    padding: 10px 0
+    
+  p
+    bottom: 30px
+    line-height: 1.5
+    -webkit-transform: translate3d(0,100%,0)
+    transform: translate3d(0,100%,0)
+    
+  h3
+    top: 30px
+    -webkit-transition: -webkit-transform 0.35s
+    transition: transform 0.35s
+    -webkit-transform: translate3d(0,20px,0)
+    transform: translate3d(0,20px,0)
+    
+  h3::after
+    position: absolute
+    top: 100%
+    left: 0
+    width: 100%
+    height: 4px
+    background: #fff
+    content: ""
+    -webkit-transform: translate3d(0,40px,0)
+    transform: translate3d(0,40px,0)
+    
+  h3::after, p
+    opacity: 0
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s
+    transition: opacity 0.35s, transform 0.35s
+    
+  &:hover h3::after, &:hover p
+    opacity: 1
+    -webkit-transform: translate3d(0,0,0)
+    transform: translate3d(0,0,0)
+
+
+
+@media screen and (max-width: 767px)
+  html, body
+    font-size: 3.2vw
+  .icon-bar
+    background-color: #fff
+  .splash
+    width: 80% !important
+    top: 50px
+    h1
+      width: 100%
+  .modal-dialog
+    width: 95% !important
+    img
+      width: 95% !important
+
+@media screen and (max-width: 50em)
+  .grid figure
+    display: inline-block
+    float: none
+    margin: 10px auto
+    width: 100%
