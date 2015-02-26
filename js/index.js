@@ -32,7 +32,13 @@ $(window).on("scroll", function () {
 });
 
 
-new google.maps.Map(document.querySelector(".map"), {
+function initialize() {
+  var mapOptions = {
     center: { lat: 47.236577, lng: -93.531686},
     zoom: 10
-});
+  };
+  var map = new google.maps.Map(document.querySelector(".map"),
+      mapOptions);
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+
