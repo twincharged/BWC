@@ -30,3 +30,12 @@ $(window).on("scroll", function () {
         $(this).css({ "opacity": 1 - (st - offset + range) / range });
     });
 });
+
+
+
+google.maps.event.addDomListener(window, "load", function() {
+  var map = new google.maps.Map(document.querySelector(".map"), {
+    center: { lat: 47.236577, lng: -93.531686},
+    zoom: 8
+  });
+});
