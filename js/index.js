@@ -35,7 +35,7 @@ $(window).on("scroll", function () {
 function initialize() {
   var mapOptions = {
     center: { lat: 47.236577, lng: -93.531686},
-    zoom: 15
+    zoom: 16
   };
   var map = new google.maps.Map(document.querySelector(".map"),
       mapOptions);
